@@ -1,0 +1,72 @@
+body, html{
+    
+    font-family: 'Gilroy', sans-serif;
+}
+.cursor{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: #4f8781;
+    position: absolute;
+    pointer-events: none;
+    z-index: 10;
+    transform: scale(1);
+mix-blend-mode: difference; 
+   transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+}
+
+.page4{
+    min-height: 100vh;
+    width: 100%;
+    z-index: 9;
+    position: relative;
+    padding: 170px 100px;
+}
+.elem{
+    /* background-color: salmon; */
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.elem img{
+    position: absolute;
+    opacity: 0;
+    transition: all ease-out 0.5s;
+    transform: translateY(10%) rotate(2deg);
+}
+.elem img:nth-child(1){
+    left: 2%;
+}
+.elem img:nth-child(3){
+    right: 5%;
+}
+.text-div{
+    height: 16vh;
+    
+    position: relative;
+    z-index: 9;
+    overflow: hidden;
+}
+.elem h1{
+    font-size: 7.5vw;
+    font-weight: 600;
+    
+    transition: all ease-out 0.8s;
+}
+
+.elem:hover h1{
+    transform: translateY(-100%);
+    color: #ffbfda;
+}
+.elem:hover img{
+    opacity: 1;
+    transform: translateY(0%) rotate(0deg);
+
+}
+.page1, .page2 {
+    transition: background-color 0.9s ease, color 0.9s linear;
+  }
+  

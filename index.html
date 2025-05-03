@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div data-scroll-container class="main">
+      <div class="cursor"></div>
+      <div class="page1 w-full relative overflow-hidden">
+        <!-- Particle background -->
+        <canvas id="particles-bg" class="absolute inset-0 -z-10"></canvas>
+
+        <!-- Navigation -->
+        <nav
+          class="navbar flex justify-between items-center px-20 py-10 backdrop-blur-2xl relative z-10"
+        >
+          <a class="text-2xl font-serif font-bold">DUO</a>
+          <div class="links flex space-x-10">
+            <a href="#" class="font-bold">Home</a>
+            <a href="#" class="font-bold">About</a>
+            <a href="#" class="font-bold">Servcies</a>
+            <a href="#" class="font-bold">Product</a>
+          </div>
+          <div class="search-bar">
+            <a href="#" class="font-bold">Contact Us</a>
+          </div>
+        </nav>
+
+        <!-- Heading section -->
+        <div class="center py-32 px-20 relative z-10">
+          <h1
+            class="text-[8vw] leading-none capitalize tracking-tighter font-bold"
+          >
+            Digital Crafted
+          </h1>
+          <h2
+            class="text-[8vw] leading-none capitalize tracking-tighter font-bold text-center"
+          >
+            brand experiences
+          </h2>
+        </div>
+
+        <!-- Video placed after heading with space -->
+        <div
+          class="video-container px-4 py-10 relative z-10 flex justify-center"
+        >
+          <video
+            autoplay
+            muted
+            loop
+            src="./video.mp4"
+            class="h-[1000px] w-[800px] object-cover rounded-lg shadow-lg"
+          ></video>
+        </div>
+      </div>
+
+      <!-- Add another section to enable scrolling -->
+      <div class="page2 w-full relative py-52 px-20 text-white">
+        <h1 class="text-3xl capitalize mb-10 py-10">we are duo studio</h1>
+        <div class="content flex gap-20 mt-10 border-t py-10">
+          <p class="text-3xl w-1/2 font-bold">
+            At Duo Studio, we have a <br />
+            passion for crafting <br />
+            personalized solutions, including
+          </p>
+          <div class="w-1/2 flex flex-col">
+            <p class="text-md">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              voluptatibus, quisquam, quia, voluptatibus, quisquam, quia,
+              voluptatibus, quisquam, quia.
+            </p>
+            <button
+              class="mt-5 px-10 py-4 bg-white text-black rounded-full w-fit"
+            >
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="page3 w-full relative py-20 px-20 text-black">
+        <h1 class="text-4xl font-bold text-black capitalize mb-10 py-10">
+          Featured Projects
+        </h1>
+
+        <div class="projects grid grid-cols-2 gap-20 mt-10 space-y-32">
+          <div
+            data-scroll
+            data-scroll-speed="-1.2"
+            data-scroll-container=""
+            class="project h-[600px] rounded-lg"
+          >
+            <img class="rounded-md" src="./images.webp" alt="" />
+            <h1 class="font-bold text-md mt-4">Cruefilms</h1>
+            <p class="font-bold text-sm">Brand Strategy Website</p>
+          </div>
+          <div
+            data-scroll
+            data-scroll-speed="1.1"
+            class="project h-[600px] rounded-lg"
+          >
+            <video
+              autoplay
+              muted
+              loop
+              class="rounded-md w-[400px]"
+              src="./logovideo.mp4"
+            ></video>
+            <h1 class="font-bold text-md mt-4">Cruefilms</h1>
+            <p class="font-bold text-sm">Brand Strategy Website</p>
+          </div>
+          <div
+            data-scroll
+            data-scroll-speed="-.9"
+            class="project h-[600px] rounded-lg"
+          >
+            <video
+              autoplay
+              muted
+              loop
+              class="rounded-md w-[400px]"
+              src="./logovideo.mp4"
+            ></video>
+            <h1 class="font-bold text-md mt-4">Cruefilms</h1>
+            <p class="font-bold text-sm">Brand Strategy Website</p>
+          </div>
+          <div
+            data-scroll
+            data-scroll-speed="1.9"
+            class="project h-[600px] rounded-lg"
+          >
+            <img class="rounded-md" src="./images.webp" alt="" />
+            <h1 class="font-bold text-md mt-4">Cruefilms</h1>
+            <p class="font-bold text-sm">Brand Strategy Website</p>
+          </div>
+        </div>
+      </div>
+      <div data-scroll data-scroll-speed="4" class="page4">
+        <div class="elem">
+          <img
+            src="https://d33wubrfki0l68.cloudfront.net/3401770635e95968e300d88f8b9479ecbc008eeb/be2e5/assets/home/home-experience-1.webp"
+            alt=""
+          />
+          <div class="text-div">
+            <h1>Strategy</h1>
+            <h1>Strategy</h1>
+          </div>
+          <img
+            src="https://d33wubrfki0l68.cloudfront.net/188bb09da2a445d08ac5b4f706711772e50e8a17/e100a/assets/home/home-experience-2.webp"
+            alt=""
+          />
+        </div>
+        <div class="elem">
+          <img
+            src="https://d33wubrfki0l68.cloudfront.net/3401770635e95968e300d88f8b9479ecbc008eeb/be2e5/assets/home/home-experience-1.webp"
+            alt=""
+          />
+          <div class="text-div">
+            <h1>Planning</h1>
+            <h1>Planning</h1>
+          </div>
+          <img
+            src="https://d33wubrfki0l68.cloudfront.net/188bb09da2a445d08ac5b4f706711772e50e8a17/e100a/assets/home/home-experience-2.webp"
+            alt=""
+          />
+        </div>
+        <div class="elem">
+          <img
+            src="https://d33wubrfki0l68.cloudfront.net/3401770635e95968e300d88f8b9479ecbc008eeb/be2e5/assets/home/home-experience-1.webp"
+            alt=""
+          />
+          <div class="text-div">
+            <h1>experiences</h1>
+            <h1>experiences</h1>
+          </div>
+          <img
+            src="https://d33wubrfki0l68.cloudfront.net/188bb09da2a445d08ac5b4f706711772e50e8a17/e100a/assets/home/home-experience-2.webp"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <footer data-scroll data-scroll-speed="-.9" class="footer w-full h-screen px-20 py-20 text-white bg-black">
+        <div class="flex flex-col justify-between gap-52">
+          <h1 class="text-5xl max-w-2xl leading-15">
+            Let's create an experience as remarkable as your business
+          </h1>
+
+          <div class="flex gap-40">
+            <div class="footer-links">
+              <a href="#" class="font-bold block mt-4 underline">Home</a>
+              <a href="#" class="font-bold block mt-4 underline">About</a>
+              <a href="#" class="font-bold block mt-4 underline">Servcies</a>
+              <a href="#" class="font-bold block mt-4 underline">Product</a>
+              <a href="#" class="font-bold block mt-4 underline">Contact Us</a>
+            </div>
+            <div class="footer-links">
+              <a href="#" class="font-bold block mt-4 underline">Home</a>
+              <a href="#" class="font-bold block mt-4 underline">About</a>
+              <a href="#" class="font-bold block mt-4 underline">Servcies</a>
+              <a href="#" class="font-bold block mt-4 underline">Product</a>
+              <a href="#" class="font-bold block mt-4 underline">Contact Us</a>
+            </div>
+            <div class="footer-links">
+              <a href="#" class="font-bold block mt-4 underline">Home</a>
+              <a href="#" class="font-bold block mt-4 underline">About</a>
+              <a href="#" class="font-bold block mt-4 underline">Servcies</a>
+              <a href="#" class="font-bold block mt-4 underline">Product</a>
+              <a href="#" class="font-bold block mt-4 underline">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+      integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
