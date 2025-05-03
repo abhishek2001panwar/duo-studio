@@ -1,7 +1,11 @@
-body, html{
-    
-    font-family: 'Gilroy', sans-serif;
+*{
+    font-family: "Gilroy";
 }
+@font-face {
+    font-family: "Gilroy";
+    src: url("Gilroy-Light.ttf") format("woff2"),
+  }
+  
 .cursor{
     cursor: pointer;
     height: 15px;
