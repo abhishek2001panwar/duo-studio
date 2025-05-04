@@ -10,62 +10,69 @@
       href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
     />
     <link rel="stylesheet" href="style.css" />
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <div class="cursor"></div>
     <div data-scroll-container class="main">
-      <div class="cursor"></div>
       <div class="page1 w-full relative overflow-hidden">
         <!-- Particle background -->
         <canvas id="particles-bg" class="absolute inset-0 -z-10"></canvas>
 
         <!-- Navigation -->
         <nav
-            class="navbar flex justify-between items-center px-4 md:px-20 py-10 backdrop-blur-2xl relative z-10"
+          class="navbar flex justify-between items-center px-4 md:px-20 py-10 backdrop-blur-2xl relative z-10"
         >
-            <a class="text-2xl font-serif font-bold">DUO</a>
-            <div class="links md:flex space-x-10 shadow-md md:shadow-none  hidden" id="mobile-menu">
-                <a href="#" class="font-bold">Home</a>
-                <a href="#" class="font-bold">About</a>
-                <a href="#" class="font-bold">Servcies</a>
-                <a href="#" class="font-bold">Product</a>
-                <a href="#" class="font-bold md:hidden">Contact Us</a>
-            </div>
-            <div class="flex items-center">
-                <a href="#" class="font-bold hidden md:block mr-4">Contact Us</a>
-                <button id="menu-toggle" class="md:hidden">
-                    <i class="ri-menu-line text-2xl" id="menu-icon"></i>
-                </button>
-            </div>
+          <a class="text-2xl font-serif font-bold">DUO</a>
+          <div
+            class="links md:flex space-x-10 shadow-md md:shadow-none hidden"
+            id="mobile-menu"
+          >
+            <a href="#" class="font-bold">Home</a>
+            <a href="#" class="font-bold">About</a>
+            <a href="#" class="font-bold">Servcies</a>
+            <a href="#" class="font-bold">Product</a>
+            <a href="#" class="font-bold md:hidden">Contact Us</a>
+          </div>
+          <div class="flex items-center">
+            <a href="#" class="font-bold hidden md:block mr-4">Contact Us</a>
+            <button id="menu-toggle" class="md:hidden">
+              <i class="ri-menu-line text-2xl" id="menu-icon"></i>
+            </button>
+          </div>
         </nav>
 
         <!-- Add Remix Icons -->
 
         <!-- Add JavaScript for mobile menu toggle -->
         <script>
-            document.getElementById('menu-toggle').addEventListener('click', function() {
-                const mobileMenu = document.getElementById('mobile-menu');
-                const menuIcon = document.getElementById('menu-icon');
-                
-                mobileMenu.classList.toggle('hidden');
-                mobileMenu.classList.toggle('flex');
-                mobileMenu.classList.toggle('flex-col');
-                mobileMenu.classList.toggle('absolute');
-                mobileMenu.classList.toggle('top-20');
-                mobileMenu.classList.toggle('left-0');
-                mobileMenu.classList.toggle('w-full');
-                mobileMenu.classList.toggle('bg-white');
-                mobileMenu.classList.toggle('p-4');
-                
-                // Toggle between hamburger and close icon
-                if (menuIcon.classList.contains('ri-menu-line')) {
-                    menuIcon.classList.remove('ri-menu-line');
-                    menuIcon.classList.add('ri-close-line');
-                } else {
-                    menuIcon.classList.remove('ri-close-line');
-                    menuIcon.classList.add('ri-menu-line');
-                }
+          document
+            .getElementById("menu-toggle")
+            .addEventListener("click", function () {
+              const mobileMenu = document.getElementById("mobile-menu");
+              const menuIcon = document.getElementById("menu-icon");
+
+              mobileMenu.classList.toggle("hidden");
+              mobileMenu.classList.toggle("flex");
+              mobileMenu.classList.toggle("flex-col");
+              mobileMenu.classList.toggle("absolute");
+              mobileMenu.classList.toggle("top-20");
+              mobileMenu.classList.toggle("left-0");
+              mobileMenu.classList.toggle("w-full");
+              mobileMenu.classList.toggle("bg-white");
+              mobileMenu.classList.toggle("p-4");
+
+              // Toggle between hamburger and close icon
+              if (menuIcon.classList.contains("ri-menu-line")) {
+                menuIcon.classList.remove("ri-menu-line");
+                menuIcon.classList.add("ri-close-line");
+              } else {
+                menuIcon.classList.remove("ri-close-line");
+                menuIcon.classList.add("ri-menu-line");
+              }
             });
         </script>
 
@@ -98,86 +105,106 @@
       </div>
 
       <!-- Add another section to enable scrolling -->
-    <div class="page2 w-full relative py-20 md:py-52 px-4 md:px-20 text-white">
-      <h1 class="text-2xl md:text-3xl capitalize mb-5 md:mb-10 py-5 md:py-10">we are duo studio</h1>
-      <div class="content flex flex-col md:flex-row gap-8 md:gap-20 mt-5 md:mt-10 border-t py-5 md:py-10">
-        <p class="text-xl md:text-3xl w-full md:w-1/2 font-bold">
-        At Duo Studio, we have a <br class="hidden md:block" />
-        passion for crafting <br class="hidden md:block" />
-        personalized solutions, including
-        </p>
-        <div class="w-full md:w-1/2 flex flex-col">
-        <p class="text-md">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-          voluptatibus, quisquam, quia, voluptatibus, quisquam, quia,
-          voluptatibus, quisquam, quia.
-        </p>
-        <button
-          class="mt-5 px-8 md:px-10 py-3 md:py-4 bg-white text-black rounded-full w-fit"
+      <div
+        class="page2 w-full relative py-20 md:py-52 px-4 md:px-20 text-white"
+      >
+        <h1 class="text-2xl md:text-3xl capitalize mb-5 md:mb-10 py-5 md:py-10">
+          we are duo studio
+        </h1>
+        <div
+          class="content flex flex-col md:flex-row gap-8 md:gap-20 mt-5 md:mt-10 border-t py-5 md:py-10"
         >
-          Learn More
-        </button>
+          <p class="text-xl md:text-3xl w-full md:w-1/2 font-bold">
+            At Duo Studio, we have a <br class="hidden md:block" />
+            passion for crafting <br class="hidden md:block" />
+            personalized solutions, including
+          </p>
+          <div class="w-full md:w-1/2 flex flex-col">
+            <p class="text-md">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              voluptatibus, quisquam, quia, voluptatibus, quisquam, quia,
+              voluptatibus, quisquam, quia.
+            </p>
+            <button
+              class="mt-5 px-8 md:px-10 py-3 md:py-4 bg-white text-black rounded-full w-fit"
+            >
+              Learn More
+            </button>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="page3 w-full relative py-10 md:py-20 px-4 md:px-20 text-black">
-      <h1 class="text-2xl md:text-4xl font-bold text-black capitalize mb-5 md:mb-10 py-5 md:py-10">
-        Featured Projects
-      </h1>
+      <div
+        class="page3 w-full relative py-10 md:py-20 px-4 md:px-20 text-black"
+      >
+        <h1
+          class="text-2xl md:text-4xl font-bold text-black capitalize mb-5 md:mb-10 py-5 md:py-10"
+        >
+          Featured Projects
+        </h1>
 
-      <div class="projects grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 mt-5 md:mt-10 space-y-16 md:space-y-32">
         <div
-        data-scroll
-        data-scroll-speed="-1.2"
-        data-scroll-container=""
-        class="project h-auto md:h-[600px] rounded-lg"
+          class="projects grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 mt-5 md:mt-10 space-y-16 md:space-y-32"
         >
-        <img class="rounded-md w-full h-auto object-cover" src="./images.webp" alt="" />
-        <h1 class="font-bold text-md mt-4">Cruefilms</h1>
-        <p class="font-bold text-sm">Brand Strategy Website</p>
-        </div>
-        <div
-        data-scroll
-        data-scroll-speed="1.1"
-        class="project h-auto md:h-[600px] rounded-lg"
-        >
-        <video
-          autoplay
-          muted
-          loop
-          class="rounded-md w-full md:w-[400px] h-auto object-cover"
-          src="./logovideo.mp4"
-        ></video>
-        <h1 class="font-bold text-md mt-4">Cruefilms</h1>
-        <p class="font-bold text-sm">Brand Strategy Website</p>
-        </div>
-        <div
-        data-scroll
-        data-scroll-speed="-.9"
-        class="project h-auto md:h-[600px] rounded-lg"
-        >
-        <video
-          autoplay
-          muted
-          loop
-          class="rounded-md w-full md:w-[400px] h-auto object-cover"
-          src="./logovideo.mp4"
-        ></video>
-        <h1 class="font-bold text-md mt-4">Cruefilms</h1>
-        <p class="font-bold text-sm">Brand Strategy Website</p>
-        </div>
-        <div
-        data-scroll
-        data-scroll-speed="1.9"
-        class="project h-auto md:h-[600px] rounded-lg"
-        >
-        <img class="rounded-md w-full h-auto object-cover" src="./images.webp" alt="" />
-        <h1 class="font-bold text-md mt-4">Cruefilms</h1>
-        <p class="font-bold text-sm">Brand Strategy Website</p>
+          <div
+            data-scroll
+            data-scroll-speed="-1.2"
+            data-scroll-container=""
+            class="project h-auto md:h-[600px] rounded-lg"
+          >
+            <img
+              class="rounded-md w-full h-auto object-cover"
+              src="./images.webp"
+              alt=""
+            />
+            <h1 class="font-bold text-md mt-4">Cruefilms</h1>
+            <p class="font-bold text-sm">Brand Strategy Website</p>
+          </div>
+          <div
+            data-scroll
+            data-scroll-speed="1.1"
+            class="project h-auto md:h-[600px] rounded-lg"
+          >
+            <video
+              autoplay
+              muted
+              loop
+              class="rounded-md w-full md:w-[400px] h-auto object-cover"
+              src="./logovideo.mp4"
+            ></video>
+            <h1 class="font-bold text-md mt-4">Cruefilms</h1>
+            <p class="font-bold text-sm">Brand Strategy Website</p>
+          </div>
+          <div
+            data-scroll
+            data-scroll-speed="-.9"
+            class="project h-auto md:h-[600px] rounded-lg"
+          >
+            <video
+              autoplay
+              muted
+              loop
+              class="rounded-md w-full md:w-[400px] h-auto object-cover"
+              src="./logovideo.mp4"
+            ></video>
+            <h1 class="font-bold text-md mt-4">Cruefilms</h1>
+            <p class="font-bold text-sm">Brand Strategy Website</p>
+          </div>
+          <div
+            data-scroll
+            data-scroll-speed="1.9"
+            class="project h-auto md:h-[600px] rounded-lg"
+          >
+            <img
+              class="rounded-md w-full h-auto object-cover"
+              src="./images.webp"
+              alt=""
+            />
+            <h1 class="font-bold text-md mt-4">Cruefilms</h1>
+            <p class="font-bold text-sm">Brand Strategy Website</p>
+          </div>
         </div>
       </div>
-    </div>
       <div data-scroll data-scroll-speed="4" class="page4">
         <div class="elem">
           <img
@@ -223,39 +250,161 @@
         </div>
       </div>
 
-    <footer data-scroll data-scroll-speed="-.9" class="footer w-full min-h-screen px-4 sm:px-8 md:px-12 lg:px-20 py-10 md:py-20 text-white bg-black">
-        <div class="flex flex-col justify-between h-full gap-12 md:gap-24 lg:gap-52">
-            <h1 class="text-3xl md:text-4xl lg:text-5xl max-w-2xl leading-tight">
-                Let's create an experience as remarkable as your business
+      <div class="page2 py-16 md:py-32 transition-colors duration-500" >
+        <div class="image-gallery w-full overflow-hidden">
+          <h2 class="text-3xl md:text-5xl font-bold text-center mb-12 md:mb-20">Our Gallery</h2>
+  
+          <div class="relative h-[800px] md:h-[1000px] mx-auto px-4" id="gallery-container" data-scroll data-scroll-speed="0.1">
+            <!-- First image -->
+            <div class="gallery-item box absolute top-0 left-1/2 transform -translate-x-1/2 w-[50%] md:w-[20%] overflow-hidden rounded-lg shadow-xl z-40" data-direction="right"                data-image="https://images.unsplash.com/photo-1688362809005-e1d27bf427ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDd8Ym84alFLVGFFMFl8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60">
+
+              <img src="https://images.unsplash.com/photo-1688362809005-e1d27bf427ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDd8Ym84alFLVGFFMFl8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Architecture" class="w-full h-[180px] md:h-[220px] object-cover  transition-transform duration-700">
+            </div>
+  
+            <!-- Second image -->
+            <div class="gallery-item box absolute top-[200px] md:top-[300px] left-1/2 transform -translate-x-1/2 w-[50%] md:w-[20%] overflow-hidden rounded-lg shadow-xl z-30" data-direction="left"                 data-image="https://images.unsplash.com/photo-1688232543149-5602b136ba11?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDExfGJvOGpRS1RhRTBZfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60">
+
+              <img src="https://images.unsplash.com/photo-1688232543149-5602b136ba11?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDExfGJvOGpRS1RhRTBZfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60" alt="Design" class="w-full h-[160px] md:h-[200px] object-cover  transition-transform duration-700">
+            </div>
+  
+            <!-- Third image -->
+            <div class="gallery-item box absolute top-[380px] md:top-[540px] left-[300px] transform -translate-x-1/2 w-[50%] md:w-[20%] overflow-hidden rounded-lg shadow-xl z-20" data-direction="right"                 data-image="https://images.unsplash.com/photo-1688103920333-117afda88518?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDMwfGJvOGpRS1RhRTBZfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60">
+
+              <img src="https://images.unsplash.com/photo-1688103920333-117afda88518?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDMwfGJvOGpRS1RhRTBZfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60" alt="Abstract" class="w-full h-[160px] md:h-[180px] object-cover  transition-transform duration-700">
+            </div>
+  
+            <!-- Fourth image -->
+            <div class="gallery-item box absolute top-[550px] md:top-[80px] left-2/3 transform -translate-x-1/2 w-[50%] md:w-[30%] overflow-hidden rounded-lg shadow-xl z-10" data-direction="left"                 data-image="https://images.unsplash.com/photo-1687913161653-7cddb0ba09b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=736&q=80">
+
+              <img src="https://images.unsplash.com/photo-1687913161653-7cddb0ba09b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=736&q=80" alt="Nature" class="w-full h-[160px] md:h-[180px] object-cover  transition-transform duration-700">
+            </div>
+            
+            <!-- Fifth image -->
+            <div class="gallery-item box absolute top-[200px] md:top-[260px] left-1/4 transform -translate-x-1/2 w-[50%] md:w-[25%] overflow-hidden rounded-lg shadow-xl z-15" data-direction="right"                 data-image="https://images.unsplash.com/photo-1686904423955-b928225c6488?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDg1fGJvOGpRS1RhRTBZfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60">
+
+              <img src="https://images.unsplash.com/photo-1686904423955-b928225c6488?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDg1fGJvOGpRS1RhRTBZfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60" alt="Creative" class="w-full h-[180px] md:h-[220px] object-cover  transition-transform duration-700">
+            </div>
+            
+            <!-- Sixth image -->
+            <div class="gallery-item box absolute top-[400px] md:top-[500px] right-1/4 transform translate-x-1/2 w-[50%] md:w-[22%] overflow-hidden rounded-lg shadow-xl z-25" data-direction="left" data-image="https://images.unsplash.com/photo-1688103920333-117afda88518?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDMwfGJvOGpRS1RhRTBZfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60">
+              <img src="https://images.unsplash.com/photo-1688103920333-117afda88518?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDMwfGJvOGpRS1RhRTBZfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60" alt="Digital" class="w-full h-[160px] md:h-[190px] object-cover  transition-transform duration-700">
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="w-full px-2 py-10 md:px-20 md:py-32">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold">
+          We are Duo Studio
+        </h1>
+
+        <div
+          class="box  flex justify-between items-center border-t mt-10 pt-4"
+          data-image="https://images.unsplash.com/photo-1688362809005-e1d27bf427ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDd8Ym84alFLVGFFMFl8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+        >
+          <h1 class="text-2xl font-bold">Google</h1>
+          <h2>2023</h2>
+        </div>
+        <div
+          class="box  flex justify-between items-center border-t mt-10 pt-4"
+          data-image="https://images.unsplash.com/photo-1688232543149-5602b136ba11?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDExfGJvOGpRS1RhRTBZfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+        >
+          <h1 class="text-2xl font-bold">Apple</h1>
+          <h2>2022</h2>
+        </div>
+        <div
+          class="box  flex justify-between items-center border-t mt-10 pt-4"
+          data-image="https://images.unsplash.com/photo-1688103920333-117afda88518?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDMwfGJvOGpRS1RhRTBZfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+        >
+          <h1 class="text-2xl font-bold">Microsoft</h1>
+          <h2>2021</h2>
+        </div>
+        <div
+          class="box  flex justify-between items-center border-t mt-10 pt-4"
+          data-image="https://images.unsplash.com/photo-1687913161653-7cddb0ba09b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=736&q=80"
+        >
+          <h1 class="text-2xl font-bold">Amazon</h1>
+          <h2>2020</h2>
+        </div>
+        <div
+          class="box  flex justify-between items-center border-t mt-10 pt-4"
+          data-image="https://images.unsplash.com/photo-1686904423955-b928225c6488?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDg1fGJvOGpRS1RhRTBZfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+        >
+          <h1 class="text-2xl font-bold">Meta</h1>
+          <h2>2019</h2>
+        </div>
+        
+      </div>
+
+      <footer
+        data-scroll
+        data-scroll-speed="-.9"
+        class="footer w-full min-h-screen px-4 sm:px-8 md:px-12 lg:px-20 py-10 md:py-20 text-white bg-black"
+      >
+        <div class="flex flex-col h-full gap-12 md:gap-32 lg:gap-10">
+          <div class="flex flex-col lg:flex-row gap-10 lg:gap-52">
+            <h1
+              class="text-3xl md:text-4xl lg:text-5xl max-w-2xl leading-tight"
+            >
+              Let's create an experience as remarkable as your business
             </h1>
 
-            <div class="flex flex-col md:flex-row gap-8 md:gap-16 lg:gap-40">
-                <div class="footer-links">
-                    <a href="#" class="font-bold block mt-4 underline">Home</a>
-                    <a href="#" class="font-bold block mt-4 underline">About</a>
-                    <a href="#" class="font-bold block mt-4 underline">Servcies</a>
-                    <a href="#" class="font-bold block mt-4 underline">Product</a>
-                    <a href="#" class="font-bold block mt-4 underline">Contact Us</a>
-                </div>
-                <div class="footer-links mt-8 md:mt-0">
-                    <a href="#" class="font-bold block mt-4 underline">Home</a>
-                    <a href="#" class="font-bold block mt-4 underline">About</a>
-                    <a href="#" class="font-bold block mt-4 underline">Servcies</a>
-                    <a href="#" class="font-bold block mt-4 underline">Product</a>
-                    <a href="#" class="font-bold block mt-4 underline">Contact Us</a>
-                </div>
-                <div class="footer-links mt-8 md:mt-0">
-                    <a href="#" class="font-bold block mt-4 underline">Home</a>
-                    <a href="#" class="font-bold block mt-4 underline">About</a>
-                    <a href="#" class="font-bold block mt-4 underline">Servcies</a>
-                    <a href="#" class="font-bold block mt-4 underline">Product</a>
-                    <a href="#" class="font-bold block mt-4 underline">Contact Us</a>
-                </div>
+            <!-- Circular Get in Touch Box -->
+            <div
+              class="bg-neutral-900 rounded-md p-6 md:p-8 w-full lg:w-80 h-80 flex flex-col justify-center items-center text-"
+            >
+              <h3 class="text-xl font-bold mb-4">Get in Touch</h3>
+              <form class="w-full">
+                <input
+                  type="name"
+                  placeholder="Your name"
+                  class="w-full bg-transparent border-b border-white/50 focus:border-white outline-none py-2 mb-4 text-sm"
+                  required
+                />
+              </form>
+              <form class="w-full">
+                <input
+                  type="email"
+                  placeholder="Your email"
+                  class="w-full bg-transparent border-b border-white/50 focus:border-white outline-none py-2 mb-4 text-sm"
+                  required
+                />
+                <button
+                  type="submit"
+                  class="w-full py-2 px-4 bg-white text-black rounded-full font-bold text-sm hover:bg-gray-200 transition-colors"
+                >
+                  Send
+                </button>
+              </form>
             </div>
+          </div>
+
+          <div class="flex flex-col md:flex-row gap-8 md:gap-16 lg:gap-40">
+            <div class="footer-links">
+              <a href="#" class="font-bold block mt-4 underline">Home</a>
+              <a href="#" class="font-bold block mt-4 underline">About</a>
+              <a href="#" class="font-bold block mt-4 underline">Servcies</a>
+              <a href="#" class="font-bold block mt-4 underline">Product</a>
+              <a href="#" class="font-bold block mt-4 underline">Contact Us</a>
+            </div>
+            <div class="footer-links mt-8 md:mt-0">
+              <a href="#" class="font-bold block mt-4 underline">Home</a>
+              <a href="#" class="font-bold block mt-4 underline">About</a>
+              <a href="#" class="font-bold block mt-4 underline">Servcies</a>
+              <a href="#" class="font-bold block mt-4 underline">Product</a>
+              <a href="#" class="font-bold block mt-4 underline">Contact Us</a>
+            </div>
+            <div class="footer-links mt-8 md:mt-0">
+              <a href="#" class="font-bold block mt-4 underline">Home</a>
+              <a href="#" class="font-bold block mt-4 underline">About</a>
+              <a href="#" class="font-bold block mt-4 underline">Servcies</a>
+              <a href="#" class="font-bold block mt-4 underline">Product</a>
+              <a href="#" class="font-bold block mt-4 underline">Contact Us</a>
+            </div>
+          </div>
         </div>
-    </footer>
-     
-      
+      </footer>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
@@ -271,6 +420,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>

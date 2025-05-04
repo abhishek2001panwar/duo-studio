@@ -34,6 +34,33 @@ document.addEventListener("mousemove",function(dets){
     crsr.style.top = dets.y + 10+"px"
 })
 
+//
+var boxes = document.querySelectorAll(".box")
+boxes.forEach(function(ele){
+    ele.addEventListener("mouseenter",function(){
+        crsr.style.height = '400px' 
+        crsr.style.width = '400px'
+        crsr.style.borderRadius = "4%"
+        let att  = ele.getAttribute("data-image")
+        crsr.style.backgroundImage = `url(${att})`
+        crsr.style.backgroundSize = "cover"
+        crsr.style.backgroundPosition = "center"
+        crsr.style.transform = "scale(1)"
+        crsr.style.zIndex = "1000"
+        ele.style.transition = "all 0.5s"
+      
+    })
+    ele.addEventListener("mouseleave",function(){
+        crsr.style.height = '20px'
+        crsr.style.width = '20px'
+        crsr.style.borderRadius = "50%"
+        ele.style.transition = "all 0.5s"
+        crsr.style.backgroundImage = "none"
+        crsr.style.transform = "scale(0)"
+        
+    })
+})
+
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -199,3 +226,28 @@ ScrollTrigger.create({
     }
   });
   
+  const galleryItems = document.querySelectorAll('.gallery-item');
+      
+  galleryItems.forEach((item, index) => {
+    const direction = item.getAttribute('data-direction');
+    const xOffset = direction === 'right' ? 200 : -200; // Move right or left
+    
+    // Initial position - slightly offset in the opposite direction
+    gsap.set(item, {
+      x: -xOffset * 0.5 // Start from opposite direction
+    });
+    
+    // Create the scroll-triggered animation
+    gsap.to(item, {
+      x: xOffset, // Move in the specified direction
+      ease: "power1.inOut",
+      scrollTrigger: {
+        trigger: '#gallery-container',
+        scroller: ".main", // Important for Locomotive Scroll
+        start: "top 90%",
+        end: "bottom 20%",
+        scrub: true,
+        toggleActions: "play none none reverse"
+      }
+    });
+  });
